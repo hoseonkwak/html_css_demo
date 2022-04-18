@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션</title>
+    <link rel="stylesheet" href="css/setting.css">
+    <style>
+        .parent{
+            width: 300px; height: 300px;
+            border: 3px solid #09f;
+            box-sizing: border-box;
+            margin: 50px auto;
+        }
+        p{
+            height: 50px;
+            background-color: rgba(220, 210, 60, 0.3);
+        }
+        .child{
+            width: 200px; height: 150px;
+            background-color: rgba(220, 20, 60, 0.3);
+        }
+    </style>
+    <style>
+        .child{
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+        .parent{
+            position: relative;
+        }
+        /*
+            자식이 absolute면 부모를 relative로 많이 한다.
+            즉 relative가 있으면 자식중에 하나가 absolute가 있을 가능성이 있다.
+        */
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <p>블록 요소 p</p>
+        <div class="child">.child</div>
+    </div>
+</body>
+</html>

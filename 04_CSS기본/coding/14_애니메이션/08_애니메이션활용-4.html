@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <style>
+        .frame{
+            border: 1px solid red;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+        .box{
+            width: 100px; height: 100px;
+            background-color: gold;
+            position: absolute;
+            top: 100%; left: 0;
+            border-radius: 50%
+        }
+        /*(1)키프레임 생성*/
+        @keyframes move {
+            0% {
+                left: -50px;
+            }
+            40% {
+                top: 0; left: 50%; margin-left: -50px;
+                box-shadow: 0 0 0 red;
+            }
+            50% {
+                top: 0; left: 50%; margin-left: -50px;
+                box-shadow: 0 0 100px red;
+            }
+            70% {
+                /*top: 0; left: 50%; margin-left: -50px;*/
+                box-shadow: 0 0 0 red;
+            }
+            100% {
+                top: 100%; left: 100%;
+            }
+        }
+        /* (2) 애니메이션 생성과 적용 */
+        .box{animation: move 10s 1s linear infinite;}
+    </style>
+    <style>
+        @keyframes mov2{
+            50%{
+                background-color: yellowgreen;
+                transform: scale(3) rotate(-765deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

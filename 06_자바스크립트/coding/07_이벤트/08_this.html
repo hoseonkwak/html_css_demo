@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+      var bt = document.querySelector('#bt');
+      var check = false;
+      
+      bt.onclick = function(){
+        if(!check){
+          this.style.background = 'gold';
+          check = true;
+        }else {
+          this.style.background = 'skyblue';
+          check = false;
+        }
+      }
+    }
+    /* this -> 감싸고 있는 function을 찾고 그 function에 연결되어있는 객체 */
+  </script>
+</head>
+<body>
+  <div id="bt">계속 클릭</div>
+</body>
+</html>

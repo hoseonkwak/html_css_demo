@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        .frame{
+            width: 600px;
+            position: relative;
+            border: 5px solid;
+            overflow: hidden;    /*빠져나가는 부분은 없애라.*/
+        }
+        .frame img{width: 100%;}
+    </style>
+    <style>
+        .frame img{
+            position: absolute; top: 0; left: 0;
+            z-index: -1;
+            /*
+                z-index는 자연수를 주고 주로 10씩 증가시킨다
+            */
+        }
+        .frame{height: 400px;}
+        
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <img src="http://wooreeweb.com/img/h05.jpg" alt="">
+        <h2>h2 TEXT</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체와 메소드</title>
+  <script src="js/output.js"></script>
+  <script>
+    //객체 생성
+    var cc = new Object(); //Object() ->생성자함수
+    /* 
+      new가 들어가면 객체
+    */
+
+    // 객체의 속성(property)과 메소드(method) 설정/변경/저장
+    cc.color = 'red';
+    cc.diameter = 100;
+    cc.radius = function(){
+      var n = this.diameter / 2;
+      //this : 현재 실행된 객체
+      return n;
+    }
+    //속성에 익명함수의 형태로 들어가있으면 메소드이다.
+
+    // 객체의 속성(데이터) 읽어보기
+     prn('cc.color : ' + cc.color);
+     prn('cc.diameter : ' + cc.diameter);
+     //객체의 메소드(함수) 실행
+     prn('cc.radius() : ' + cc.radius());
+     line();
+
+     cc.color = 'blue';
+     cc.diameter = 300;
+
+     // 객체의 속성(데이터) 읽어보기
+     prn('cc.color : ' + cc.color);
+     prn('cc.diameter : ' + cc.diameter);
+     //객체의 메소드(함수) 실행
+     prn('cc.radius() : ' + cc.radius());
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

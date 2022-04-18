@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>활용 - 배경색 변경-1</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+      var body = document.querySelector('body');
+      var btn = document.querySelectorAll('div');
+
+      //bnt 객체 반복
+      for(var i in btn){
+        btn[i].onclick = function(){
+          var bg = this.getAttribute('title');
+          //this - 클릭한 놈
+          body.style.backgroundColor = bg;
+          body.style.textShadow = '1px 0px 1px #eee';
+          body.style.transition = 'all 0.6s';
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>배경색 바꾸기 : 기본형</h3>
+  <div title="red">red</div>
+  <div title="green">green</div>
+  <div title="blue">blue</div>
+</body>
+</html>

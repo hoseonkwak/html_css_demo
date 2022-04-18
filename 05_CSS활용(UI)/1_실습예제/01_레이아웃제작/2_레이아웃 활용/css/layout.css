@@ -1,0 +1,245 @@
+/*********************************
+  css/layout.css
+*********************************/
+
+/* font.css 불러오기 */
+
+
+/* 초기화 */
+* {  }
+li {  }
+a {  }
+body * {  }
+
+/* 전체 구조 -- FULL-WIDTH */
+body {
+  
+}
+
+/* 배경 동영상 고정 */
+.vid {
+  
+}
+.vid video {
+  
+}
+
+/* 배경 레이어 - 패턴(ptn.png) */
+.layer {
+
+}
+
+/* 로고 */
+#logo {
+
+}
+#logo img {
+
+}
+
+/* 헤더(선형 그레이디언트 적용, -45deg, #df6, #cf1, #ae5) */
+header {
+
+}
+
+/* 내비게이션(상단으로부터 200px 위치, 너비 200) */
+#gnb {
+
+}
+#gnb li {
+
+}
+
+/* 메인메뉴(1차-높이 50) */
+#gnb > li > a {
+  
+}
+#gnb em {
+  
+}
+
+/* 호버 스타일 */
+#gnb > li:hover > a {
+  
+}
+
+/* 서브메뉴(2차) */
+#gnb > li > ul {
+  
+}
+#gnb > li > ul > li > a {
+  
+}
+
+/* 서브메뉴를 메인메뉴의 우측에 배치 */
+#gnb > li > ul {  }
+
+/* 서브메뉴 숨기기 */
+#gnb > li > ul {
+  
+}
+
+/* 메인메뉴 호버시 서브메뉴 보이기 */
+#gnb > li:hover > ul {
+  
+}
+
+/* 서브메뉴 전환 효과(0.6초) */
+#gnb > li > ul {
+  
+}
+
+/* 서브메뉴 호버 효과 */
+#gnb ul a:hover {
+
+}
+
+/*
+  SNS(상단으로부터 50, 우측에서 50)
+*/
+
+#sns {
+
+}
+
+/* 아이콘 가로 배치(아이콘 간격은 30) */
+#sns li {
+
+}
+
+/* 아이콘 스타일(기준 글자 크기의 2배) */
+#sns .fa {
+
+}
+
+#sns .fa:hover {
+
+}
+
+/* 
+  타이포그래피 슬로건(350x200, 상단으로부터 250, 우측으로부터 250)
+  strong 태그 글꼴 Arial, Helvetica, sans-serif
+ */
+
+ .slogan {
+
+ }
+
+ .slogan .tit {
+
+ }
+ .slogan .tit em {  }
+
+ .slogan .txt {
+
+ }
+ .slogan .txt strong {
+   
+ }
+
+/* 
+  우측 사이드바(기본 너비 400)
+*/
+
+#side {
+
+}
+#side .con {
+
+}
+
+/* 사이드바 호버시 배너 영역 이동(기준 위치에서 우측으로 50) */
+#side:hover .con {  }
+#side .con {  }
+
+/* 사이드바 내부 배너(300x100, 우측으로 50px 이동) */
+#side .con p {
+
+}
+#side .con p em {
+  
+}
+#side .con p img {
+  
+}
+
+/* 겹쳐진 배너 이미지 재배치 */
+#side .con p:nth-child(3) {  }
+#side .con p:nth-child(2) {  }
+#side .con p:nth-child(1) {  }
+
+/* 사이드바 배너 호버 효과 */
+#side .con p img:hover {  }
+#side .con p img {  }
+
+/* 모션 아이콘 (<<, 너비 150, 높이 50, 기준 글자 크기의 5배) */
+#side .btn {
+
+}
+#side .btn i {
+
+}
+
+/* 사이드바 호버시 아이콘 우측으로 내보내기 */
+#side:hover .btn {  }
+#side .btn {  }
+
+/* 사이드바 우측으로 내보내기 */
+#side {  }
+
+/* 사이드바 호버시 좌측으로 들어오기 */
+#side:hover {  }
+#side {  }
+
+/* 배너 이미지 시간차 등장 */
+#side .con p {  }
+#side:hover .con p {  }
+
+#side .con p:nth-child(1) {  }
+#side .con p:nth-child(2) {  }
+#side .con p:nth-child(3) {  }
+
+/* 아이콘 모션 */
+@keyframes blink {
+  0% { 
+  
+  }
+  100% {
+    
+  }
+}
+
+.btn i {  }
+.btn i:nth-child(1) {  }
+.btn i:nth-child(2) {  }
+.btn i:nth-child(3) {  }
+
+/* 
+  구조 변경
+ */
+
+ /* 헤더(너비 700, 기울이기 -40) */
+ header {
+
+ }
+
+ /* 내비게이션 텍스트 원래 상태로 */
+ #gnb em {  }
+
+/* 우측 사이드바(너비 800, 기울이기 -40) */
+#side {
+
+}
+#side:hover {
+
+}
+
+/* 배너 텍스트 원래 상태로 변경 */
+#side .con p em {
+
+}
+
+/* 모션 아이콘 원래 상태로 변경 */
+#side .btn {
+
+}

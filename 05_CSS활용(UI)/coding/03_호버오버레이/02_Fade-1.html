@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>호버 오버레이</title>
+  <style>
+    .box{
+      position: relative; overflow: hidden;
+      width: 300px;
+    }
+    .box img {
+      display: block; width: 100%;
+    }
+  </style>
+  <style>
+    .over {
+      background-color: #09c;
+      position: absolute;
+      top: 0;
+      width: 100%; height: 100%;
+    }
+    .caption {
+      font-size: 20px; font-weight: bold;
+      color: #fff;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      /* 
+        크기를 알 수 없을때 가운데 배치하는 방법
+        translate(-50%, -50%)로 주게되면 가운데로 배치
+        역 margin이랑 같은 원리
+       */
+    }
+  </style>
+  <style>
+    .over {opacity: 0;}
+    .box:hover .over {opacity: 1;}
+    .over{transition: all 0.6s;}
+  </style>
+</head>
+<body>
+ <div class="box">
+   <img src="http://wooreeweb.com/img/s07.jpg" alt="">
+   <div class="over">
+     <div class="caption">오버레이</div>
+   </div>
+ </div>
+</body>
+</html>

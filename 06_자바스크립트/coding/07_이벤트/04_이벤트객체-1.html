@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트객체</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+      var bt = document.querySelector('#btn');
+      bt.onclick = function(){
+        var str = 'target : ' + event.target + '\n';
+            str += 'type : ' + event.type + '\n';
+            str += 'clientX : ' + event.clientX + '\n';
+            str += 'clientY : ' + event.clientY + '\n';
+            str += 'screenX : ' + event.screenX + '\n';
+            str += 'screenY : ' + event.screenY + '\n';
+            str += 'Mouse Button : ' + event.button;
+        alert(str);
+      }
+
+      var txt = document.getElementById('txt');
+      txt.onkeydown = function(event){//event -> 객체의 속성을 알기위해 넣어준것
+        //onkeydown -> 키보드를 눌렀을 때
+        if(event.keyCode == 9){
+          alert('TAB 키를 눌렀습니다.');
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id = 'btn'>클릭</div>
+  <input type="text" id="txt" placeholder="TAB키를 눌러보세요">
+</body>
+</html>

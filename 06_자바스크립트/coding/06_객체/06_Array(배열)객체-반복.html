@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array(배열)객체-반복</title>
+  <script src="js/output.js"></script>
+  <script>
+    var d = [30, '홍길동', true];
+
+    prn('<h3>배열 d에 저장되어 있는 값');
+    prn('숫자 : ' + d[0]);
+    prn('문자 : ' + d[1]);
+    prn('논리 : ' + d[2]);
+    line();
+
+    prn('<h3>for(var i=0; i<3; i++) {...}</h3>');
+    //3은 배열 객체에 저장된 데이터 개수.
+    for(var i=0; i<3; i++){
+      prn(d[i]);
+    }
+    line();
+
+    prn('<h3>for(var i=0; i < d.length; i++) {...}</h3>');
+    /* 배열의 length(저장된 데이터의 개수) 속성을 반복문의 조건식에 적용 */
+    for(var i=0; i<d.length; i++){
+      prn(d[i]);
+    }
+    line();
+
+    prn('<h3>for ( i in d ) {...}</h3>');
+    for(i in d){
+      prn(d[i]);
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

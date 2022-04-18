@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <style>
+        .frame{
+            border: 1px solid red;
+            position: relative; 
+            /*자신을 움직이기위해,
+                자손중에 absolute를 주기 위해,
+                습관적으로 준다.
+            */
+            height: 500px;
+            overflow: hidden;
+            /*
+                영역밖으로 나가는 것 자르기
+                플로팅 해제 할 때 사용
+            */
+        }
+        .box{
+            width: 100px; height: 100px;
+            background-color: gold;
+            position: absolute;
+            /*
+                프레임기준으로 위치를 잡는다.
+            */
+            top: 0; left: 0;
+        }
+        /*(1)키프레임 생성*/
+        @keyframes mov {
+            0% {
+                width: 100px; height: 100px;
+                background-color: gold;
+                top: 0; left: 0;
+                transform: scale(1) rotate(0deg); 
+                /*안써줘도 무방*/
+            }
+            100% {
+                border-radius: 50%;
+                background-color: crimson;
+                top: 100%; left: 100%;
+                transform: scale(3) rotate(720deg);
+            }
+        }
+        /* (2) 애니메이션 생성과 적용 */
+        .box{animation: mov 5s 1s linear infinite;}
+    </style>
+    <style>
+        @keyframes mov2{
+            50%{
+                background-color: yellowgreen;
+                transform: scale(3) rotate(-765deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

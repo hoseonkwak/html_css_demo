@@ -1,0 +1,288 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+ .frame {
+     width: 1200px;
+     height: 500px;
+     overflow: hidden;
+     margin: 0 auto;
+     position: relative;
+ }
+ 
+ .illCity{
+     background-image: url(../img/spiderman/back2.png);
+     width: 100%; height: 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     position: absolute;
+     top: 0; left: 0;
+     animation: movIllcity 25s linear infinite;
+ }
+
+ .cloud1 {
+     background-image: url(../img/spiderman/cloud1.png);
+     width: 113px; height: 49px;
+     position: absolute;
+     right: 70px; bottom: 200px;
+     background-repeat: no-repeat;
+     animation: movCloud 25s linear infinite;
+ }
+
+ .cloud2 {
+    background-image: url(../img/spiderman/cloud2.png);
+    width: 24px; height: 19px;
+    position: absolute;
+    right: 440px; top: 100px;
+    transform: rotate(40deg);
+    background-repeat: no-repeat;
+    animation: movCloud2 25s linear infinite;
+}
+
+.cloud3 {
+    background-image: url(../img/spiderman/cloud3.png);
+    width: 80px; height: 25px;
+    position: absolute;
+    right: 480px; bottom: 230px;
+    background-repeat: no-repeat;
+    animation: movCloud3 25s linear infinite;
+}
+
+.body {
+    background-image: url(../img/spiderman/body.png);
+    background-repeat: no-repeat;
+    width: 147px; height: 185px;
+    position: absolute;
+    top: 130px; left: 90px;
+    animation: movBody 25s linear infinite;
+}
+
+.head{
+    background-image: url(../img/spiderman/head.png);
+    position: absolute;
+    width: 125px; height: 125px;
+    top: 90px; left: 138px;
+    transform-origin: left bottom;
+    animation: movHead 25s linear infinite;
+}
+
+.hand{
+    background-image: url(../img/spiderman/hand.png);
+    width: 28px; height: 46px;
+    position: absolute;
+    top: 235px; left: 210px;
+    transform-origin: left top;
+    animation: movHand 25s linear infinite;
+}
+
+ .city{
+     background-image: url(../img/spiderman/city.png);
+     width: 100%; height: 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     animation: movCity 25s linear infinite;
+ }
+ 
+ .spiderman{
+    background-image: url(../img/spiderman/spiderman2.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -20px; left: 50px;
+    width: 556px; height: 551px;
+    animation: movSpider 25s linear infinite;
+ }
+
+ 
+.back{
+    background-image: url(../img/spiderman/back1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: movBack 25s linear infinite;
+    z-index: -9999;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.marvelLogo{
+    background-image: url(../img/spiderman/marvelLogo2.png);
+    background-repeat: no-repeat;
+    width: 100%; height: 100%;
+    position: absolute;
+    /* top: 50%; margin-top: -111px;
+    left: 50%; margin-left: -302px; */
+    animation: movMarvel 25s linear infinite;
+}
+
+.eye{
+    width: 443px; height: 315px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 50%; margin-bottom: -158px;
+    left: 50%; margin-left: -222px;
+    animation: movEye 25s infinite;
+}
+
+.spiderLogo{
+    background-image: url(../img/spiderman/spidermanlogo.png);
+    background-repeat: no-repeat;
+    width: 400px; height: 400px;
+    position: absolute;
+    top: 50%; margin-top: -200px;
+    left: 50%; margin-left: -193px;
+    animation: movSpiderLogo 25s infinite;
+    
+}
+
+.spiderLogo2{
+    background-image: url(../img/spiderman/spiderLogo2.png);
+    background-repeat: no-repeat;
+    width: 1015px; height: 449px;
+    position: absolute;
+    top: 50%; margin-top: -225px;
+    left: 50%; margin-left: -508px;
+    animation: movSpiderLogo2 25s infinite;
+}
+
+
+
+/*******************
+    애니메이션
+********************/
+
+@keyframes movIllcity {
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    65%{opacity: 1;}
+    /* 95%{opacity: 1;} */
+    100%{opacity: 1;}
+}
+
+@keyframes movHead{
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    65%{opacity: 1; transform: rotate(0deg);}
+    70% {transform: rotate(3deg);}
+    80% {transform: rotate(0deg);}
+    90% {transform: rotate(3deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@keyframes movBody{
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    65%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes movHand{
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    65%{opacity: 1; transform: rotate(0deg);}
+    70% {transform: rotate(10deg);}
+    80% {transform: rotate(0deg);}
+    90% {transform: rotate(10deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@keyframes movCloud {
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    65%{opacity: 1; right: 75px; bottom: 200px;}
+    70% {right: 55px; bottom: 200px;}
+    75% {right: 75px; bottom: 200px;}
+    80% {right: 55px; bottom: 200px;}
+    85%{right: 75px; bottom: 200px;}
+    90% {right: 55px; bottom: 200px;}
+    95%{right: 75px; bottom: 200px;}
+    100% {right: 55px; bottom: 200px;}
+}
+
+@keyframes movCloud2 {
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    65%{opacity: 1; right: 430px; top: 100px;}
+    70% {right: 440px; top: 100px;}
+    75% {right: 430px; top: 100px;}
+    80% {right: 440px; top: 100px;}
+    85%{right: 430px; top: 100px;}
+    90% {right: 440px; top: 100px;}
+    95%{right: 430px; top: 100px;}
+    100% {right: 440px; top: 100px;}
+}
+
+@keyframes movCloud3 {
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    65%{opacity: 1; right: 480px; bottom: 230px;}
+    75%{right: 460px; bottom: 230px;}
+    80%{right: 480px; bottom: 230px;}
+    90%{right: 460px; bottom: 230px;}
+    95%{right: 480px; bottom: 230px;}
+    100%{right: 460px; bottom: 230px;}
+}
+@keyframes movCity {
+    0%{opacity: 0;}
+    35%{opacity: 0;}
+    36%{opacity: 1;}
+    41%{filter: blur(2px); opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes movSpider {
+    0%{opacity: 0;}
+    30%{opacity: 0;}
+    35%{opacity: 0;transform: rotate(-60deg); transform-origin: left top; transform: scale(0.1); top: -50px;}
+    37% {opacity: 1; transform: rotate(-60deg); transform-origin: left top; transform: scale(0.1); top: -50px;}
+    50%{transform: scale(1); top: -70px;}
+    55%{transform: scale(3); opacity: 1; top: -100px; }
+    60% {transform: scale(6); opacity: 1; top: -1000px; }
+    63% { transform: scale(6); opacity: 0; top: -1000px; }
+    100% {transform: scale(6); opacity: 0;}
+}
+
+@keyframes movBack {
+    0%{opacity: 1;}
+    35%{opacity: 1;}
+    38%{opacity: 0;}
+    100%{opacity: 0;}
+    
+}
+
+@keyframes movMarvel {
+    0%{opacity: 1;}
+    7%{opacity: 1;}
+    10%{opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes movEye{
+    0%{background-image: none;}
+    9%{background-image: none;}
+    10%{background-image: url(../img/spiderman/eyes2.png);}
+    11%{background-image: url(../img/spiderman/eyes.png); opacity: 1;}
+    14%{background-image: url(../img/spiderman/eyes.png); opacity: 1;}
+    17%{background-image: url(../img/spiderman/eyes.png); opacity: 0;}
+    100%{background-image: url(../img/spiderman/eyes.png); opacity: 0;}
+}
+
+@keyframes movSpiderLogo {
+    0%{opacity: 0;}
+    16%{opacity: 0;}
+    17%{opacity: 1;}
+    20%{opacity: 1;}
+    24%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes movSpiderLogo2 {
+    0%{opacity: 0;}
+    22%{opacity: 0;}
+    25%{opacity: 1;}
+    32%{transform: scale(1);}
+    36%{transform: scale(13);}
+    38%{transform: scale(13); opacity: 1;}
+    45%{transform: scale(13); opacity: 0;}
+    100%{transform: scale(13); opacity: 0;}
+}

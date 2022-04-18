@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션</title>
+    <link rel="stylesheet" href="css/setting.css">
+    <style>
+        .parent{
+            width: 300px; height: 300px;
+            border: 3px solid #09f;
+            box-sizing: border-box;
+            margin: 50px auto;
+        }
+        p{
+            height: 50px;
+            background-color: rgba(220, 210, 60, 0.3);
+        }
+        .child{
+            width: 200px; height: 150px;
+            background-color: rgba(220, 20, 60, 0.3);
+        }
+    </style>
+    <style>
+        .child{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .parent{
+            position: absolute;
+            left: 50%;
+            margin-left: -150px;
+            /*
+                margin: auto가 적용되지 않는다.
+                absolute 상태에서는 margine: auto를 사용할 수 없다.
+                브라우저가 크기를 인식 할 수 없기 때문에.
+            
+                absolute를 가운데로 보내려면
+                left :부모 요소기준 50%;
+                margint-left : 도형의 너비의 절반!!!
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>블록 요소 p</p>
+        <div class="child">.child</div>
+    </div>
+</body>
+</html>

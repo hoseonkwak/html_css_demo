@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전역변수와 지역변수</title>
+  <script>
+    var x = 10;
+
+    function gv() {
+      x += 50;
+      document.write('<h3>x = ' + x);
+    }
+
+    function lv(){
+      var y = 20;
+      y += x;
+      document.write('<h3>y = ' + y);
+    }
+
+    gv();
+    lv();
+
+    document.write('<hr>');
+    document.write('<h2>x = ' + x);
+    document.write('<h2>Y = ' + y);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

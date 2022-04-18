@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반속 선형 그라디언트(repeating-linear-gradient)</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        div{width: 600px; height: 200px;}
+    </style>
+    <style>
+        .box{
+            background-image: repeating-linear-gradient(red, blue 20%);
+            /* % 가 몇번 반복할건지를 정한다.*/
+        }
+        .st{
+            background-image: repeating-linear-gradient(90deg, transparent 0 20px, black 20px 40px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+    <!--투명과 검정색이 15회 반복되는 세로 스트라이프 만들기-->
+    <div class="st"></div>
+</body>
+</html>

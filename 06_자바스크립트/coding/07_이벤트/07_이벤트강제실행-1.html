@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 강제 실행</title>
+  <script>
+    window.onload = function(){
+      var bt = document.querySelector('#bt');
+      bt.click = function(){
+        alert('클릭 이벤트가 실행되었습니다.');
+      }
+      bt.click();
+    }
+  </script>
+</head>
+<body>
+  <div id="bt"></div>
+</body>
+</html>

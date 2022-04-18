@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탭 메뉴</title>
+  <style>
+    *{margin: 0; padding: 0;}
+
+    .tab-menu input {display: none;}
+    .tab-menu label {
+      width: 70px; height: 30px;
+      display: inline-block;  
+      /* 
+        inline-block : inline처럼 옆으로 배치가 되는데 블록 요소 처럼 
+        여백을 줄 수 있다.
+      */
+      border: 1px solid gray;
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+    .tab-menu .tab-contents p {
+      opacity: 0; transition: all 0.6s;
+      /* 탭을 눌렀을 때 부드럽게 보이는 효과 */
+    }
+
+    /* 탭 기능 구현 */
+    .tab-menu #tab1:checked ~ .tab-contents > .tcon-1{opacity: 1;}
+    .tab-menu #tab2:checked ~ .tab-contents > .tcon-2{opacity: 1;}
+    .tab-menu #tab3:checked ~ .tab-contents > .tcon-3{opacity: 1;}
+    /* 
+      ~ : 동생를 찾을 때 사용
+      > : 자손을 찾을 때 사용
+     */
+
+    .tab-menu input:checked + label {
+      background-color: aliceblue;
+    }
+    /* + : 바로 밑에 있는 동생 */
+
+    /* 탭 메뉴 전체 크기 */
+    .tab-menu{
+      width: 300px; height: 300px;
+      margin: 10px auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .tab-menu .tab-contents {
+      position: relative; width: 100%;
+      background-color: aliceblue;
+      height: 200px;
+      border: 1px solid gray;
+      box-sizing: border-box;
+    }
+    .tab-menu .tab-contents p {
+      position: absolute; top: 0; left: 0; /* absolute 한자리로 모으기 위해 */
+      width: 100%; height: 100%;
+      box-sizing: border-box; padding: 5px;
+    }
+    .tab-menu .tab-contents {
+      z-index: -1; top: -1px;
+      /* tab-contents가 나중이라서 위에 있기때문에 밑으로 내려준다. */
+    }
+  </style>
+</head>
+<body>
+  <div class="tab-menu">
+    <!-- (1) 메뉴 탭 -->
+    <input type="radio" name="tab" id="tab1" checked>
+    <label for="tab1">메뉴1</label>
+
+    <input type="radio" name="tab" id="tab2">
+    <label for="tab2">메뉴2</label>
+
+    <input type="radio" name="tab" id="tab3">
+    <label for="tab3">메뉴3</label>
+    <!-- 
+      name을 같은걸로 해야 하나를 선택했을 때 다른 것이 해제 된다.
+      label의 for속성은 input의 id와 연결 된다.
+      그래서 글자를 클릭해도 radio버튼이 선택된다.
+      CSS는 탑다운방식이라서 위로(형, 부모)는 찾지 못한다.
+    -->
+
+    <!-- (2) 탭 컨텐츠 -->
+    <div class="tab-contents">
+      <!-- (p.tcon-$>lorem)*3 -->
+      <p class="tcon-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate, provident quisquam voluptate dolorem laboriosam laborum nulla consectetur odio, sint, minima vel ut consequatur officiis repudiandae reiciendis pariatur itaque eius.</p>
+      <p class="tcon-2">Tempore blanditiis consequuntur, neque commodi nobis beatae, asperiores dolore autem, eligendi officiis veritatis inventore odio pariatur tenetur! Tenetur reiciendis quaerat quidem, sequi incidunt quibusdam minus officiis! Eius perferendis quibusdam exercitationem.</p>
+      <p class="tcon-3">Dignissimos modi quos minus voluptas, sunt a dicta, vel magnam eveniet quod dolore necessitatibus molestias ea mollitia rerum assumenda voluptatum sapiente quis dolor ipsum. Doloribus, reprehenderit? Tempora explicabo odio nisi.</p>
+      
+    </div>
+  </div>
+</body>
+</html>

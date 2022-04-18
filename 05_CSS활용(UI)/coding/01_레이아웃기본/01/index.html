@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JUST 쇼핑몰</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <!--전체(1200px)-->
+    <div class="wrap">
+        <!--A. header-->
+        <div class="header clearfix">
+            <!--A-1. logo-->
+            <div class="logo ho">
+                <img src="http://placehold.it/200x40" alt="메인페이지도 이동">
+            </div>
+                
+            <!--A-2. nav-->
+            <div id="nav" class="ho">
+                <ul id="gnb" class="clearfix">
+                    <!--(li[class=ho]>a[href=#])*4-->
+                    <li class="ho"><a href="#">탑</a>
+                        <!--ul.sub>(li>a[href=#])*4-->
+                        <ul class="sub">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li class="ho"><a href="#">아우터</a>
+                        <ul class="sub">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li class="ho"><a href="#">팬츠</a>
+                        <ul class="sub">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li class="ho"><a href="#">악세서리</a>
+                        <ul class="sub">
+                            <li><a href="#">귀걸이</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--B. slide-->   
+        <div class="slide_wrap">
+            <div class="frame clearfix">
+                <!--.slide_item.bg_$*3-->
+                <div class="slide_item bg_1"></div>
+                <div class="slide_item bg_2"></div>
+                <div class="slide_item bg_3"></div>
+            </div>
+        </div>
+        
+        <!--C. content-->
+        <div class="content_wrap clearfix">
+            <!--.con.ho.con_$*3-->
+            <div class="con ho con_1">
+                <!--탭 (전체)-->
+                <div class="tab">
+                    <!--(1) 탭 메뉴-->
+                    <ul class="tt clearfix">
+                        <li class="ho on">공지사항</li>
+                        <li class="ho">갤러리</li>
+                    </ul>
+                    <!--(2) 탭 컨텐츠-->
+                    <div class="tcw">
+                        <div class="tc tc_1 on">
+                            <ul>
+                                <li>공지사항1</li>
+                                <li>공지사항2</li>
+                                <li>공지사항3</li>
+                                <li>공지사항4</li>
+                            </ul>
+                        </div>
+                        <div class="tc tc_2 clearfix">
+                            <img src="http://placehold.it/100X100" alt="" class="ho">
+                            <img src="http://placehold.it/100X100" alt="" class="ho">
+                            <img src="http://placehold.it/100X100" alt="" class="ho">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con ho con_2">배너</div>
+            <div class="con ho con_3">바로가기</div>
+        </div>
+        
+        <!--D. footer-->
+        <div class="footer clearfix">
+            <div class="logo ho">
+                <a href="index.html">
+                <img src="http://placehold.it/200x40" alt="메인페이지로 이동"></a>
+            </div>
+            <div class="copy ho">
+                &copy; Copyright
+            </div>
+            <div class="sns ho">
+                sns
+            </div>
+        </div>
+    </div>
+    
+    <!--팝업(모달) 레이어-->
+    <div class="modal_wrap">
+        <div class="modal">
+            <div class="mt"><h3>타이틀</h3></div>
+            <div class="mc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste mollitia molestias amet cupiditate quis id beatae tempore delectus commodi inventore odit nisi aliquid dicta incidunt architecto laboriosam, ratione reprehenderit! Rerum.</div>
+            <button>x 닫기</button>
+        </div>
+    </div>
+</body>
+</html>

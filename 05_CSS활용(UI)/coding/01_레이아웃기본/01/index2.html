@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Green복지재단</title>
+    <link rel="stylesheet" href="css/layout2.css">
+</head>
+<body>
+    <!--전체(1200px)-->
+    <div class="wrap">
+        <!--A. header-->
+        <div class="header clearfix">
+            <!--A-1. logo-->
+            <div class="logo ho">
+                <img src="img/green_logo.png" alt="메인페이지도 이동">
+            </div>
+            
+            <!--A-2. nav-->
+            <div id="nav" class="ho">
+                <ul id="gnb" class="clearfix">
+                    <!--(li[class=ho]>a[href=#])*4-->
+                    <li class="ho"><a href="#">재단소개</a>
+                        <!--ul.sub>(li>a[href=#])*3-->
+                        <ul class="sub">
+                            <li><a href="#">설립취지</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="ho"><a href="#">후원하기</a>
+                        <ul class="sub">
+                            <li><a href="#">국내후원</a></li>
+                            <li><a href="#">국외후원</a></li>
+                            <li><a href="#">맞춤후원</a></li>
+                        </ul>
+                    </li>
+                    <li class="ho"><a href="#">자료실</a>
+                        <ul class="sub">
+                            <li><a href="#">서식자료실</a></li>
+                            <li><a href="#">사진자료실</a></li>
+                            <li><a href="#">후원양식</a></li>
+                        </ul>
+                    </li>
+                    <li class="ho"><a href="#">스토리</a>
+                        <ul class="sub">
+                            <li><a href="#">웹진</a></li>
+                            <li><a href="#">보고서</a></li>
+                            <li><a href="#">나의 후원</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+         <!--B. slide-->   
+        <div class="slide_wrap">
+            <div class="frame clearfix">
+                <!--.slide_item.bg_$*3-->
+                <div class="slide_item bg_1"></div>
+                <div class="slide_item bg_2"></div>
+                <div class="slide_item bg_3"></div>
+            </div>
+        </div>
+        
+        <!--C. content-->
+        <div class="content_wrap clearfix">
+            <!--.con.ho.con_$*3-->
+            <div class="con ho con_1">
+                <!--탭 (전체)-->
+                <div class="tab">
+                    <!--(1) 탭 메뉴-->
+                    <ul class="tt clearfix">
+                        <li class="ho on">공지사항</li>
+                    </ul>
+                    <!--(2) 탭 컨텐츠-->
+                    <div class="tcw">
+                        <div class="tc tc_1 on">
+                            <ul>
+                                <li>공지사항1</li>
+                                <li>공지사항2</li>
+                                <li>공지사항3</li>
+                                <li>공지사항4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con ho con_2">
+                <!--탭 (전체)-->
+                <div class="tab">
+                    <!--(1) 탭 메뉴-->
+                    <ul class="tt clearfix">
+                        <li class="ho on">갤러리</li>
+                    </ul>
+                    <!--(2) 탭 컨텐츠-->
+                    <div class="">
+                        <div class="tc tc_2 clearfix on">
+                            <img src="http://placehold.it/100X100" alt="" class="ho">
+                            <img src="http://placehold.it/100X100" alt="" class="ho">
+                            <img src="http://placehold.it/100X100" alt="" class="ho">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con ho con_3">배너</div>
+        </div>  
+        
+        <!--D. footer-->
+        <div class="footer clearfix">
+            <div class="logo ho">
+                <a href="index2.html">
+                <img src="img/green_logo.png" alt="메인페이지로 이동"></a>
+            </div>
+            <div class="copy ho">
+                &copy; Copyright
+            </div>
+            <div class="sns ho">
+                sns
+            </div>
+        </div>  
+    </div>
+    
+    <!--팝업(모달) 레이어-->
+    <div class="modal_wrap">
+        <div class="modal">
+            <div class="mt"><h3>타이틀</h3></div>
+            <div class="mc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste mollitia molestias amet cupiditate quis id beatae tempore delectus commodi inventore odit nisi aliquid dicta incidunt architecto laboriosam, ratione reprehenderit! Rerum.</div>
+            <button>x 닫기</button>
+        </div>
+    </div>
+</body>
+</html>

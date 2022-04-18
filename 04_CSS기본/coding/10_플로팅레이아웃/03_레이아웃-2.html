@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃</title>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+        li{list-style: none;}
+        
+        /*헤더와 푸터 영역 기본 스타일*/
+        .header, .footer{
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        
+        /*컨텐츠 영역의 분리*/
+        .container .nav{width: 25%;}
+        .container .content{width: 75%;}
+        
+        .container .nav ul li{
+            background-color: #3cf;
+            color: white;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .container .nav, .container .content{
+            float: left; padding: 10px;
+        }
+        /*
+            클릭어픽스
+            -float이 적용된 요소의 부모에 적용해야 함!
+        */
+        .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .container .nav ul li:hover{
+            background-color: #9af;
+        }
+    </style>
+    <style>
+        #wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!--헤더 영역-->
+        <div class="header">
+            <h1>LOGO</h1>
+        </div>
+        
+        <!--컨텐츠 영역(사이드 내비게이션 + 컨텐츠)-->
+        <div class="container clear">
+            <!--사이드 내비게이션-->
+            <div class="nav">
+                <ul>
+                    <li>메뉴1</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                </ul>
+            </div>
+            <!--컨텐츠-->
+            <div class="content">
+                <h2>제목/ 슬로건</h2>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore quis, voluptates perferendis dolorem delectus recusandae placeat. In facilis tenetur eos nam voluptas, molestiae quia ex repellendus, odit optio dolorem?</p>
+                <p>At fuga inventore, distinctio neque qui magnam doloremque repudiandae sed repellat quisquam omnis maxime odit saepe, cum provident officiis pariatur incidunt error vel, sint animi quae nesciunt vitae. Dicta, ducimus.</p>
+            </div>
+        </div>
+        
+        <!--푸터 영역-->
+        <div class="footer">
+            <h3>&copy; myLayout</h3>
+        </div>
+    </div>
+</body>
+</html>

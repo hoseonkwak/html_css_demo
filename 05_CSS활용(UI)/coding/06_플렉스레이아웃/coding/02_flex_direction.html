@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : flex-direction</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      display: flex;
+      flex-direction: row;
+      /* 
+        주축을 가로 방향으로 설정
+        자식(플렉스 아이템)을 좌에서 우로 배치
+        우 -> 좌 : row-reverse
+       */
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      background: coral;
+      border: 2px solid #999;
+    }
+
+    #wrap div{
+      width: 33.333333%;
+    }
+
+    #wrap div:first-child {
+      background: crimson;
+    }
+    #wrap div:nth-child(2){
+      background: tan;
+    }
+    #wrap div:nth-child(3){
+      background: cadetblue;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그라디언트</title>
+    <style>
+        div{
+            width: 300px; height: 200px;
+            background-color: orange;
+            margin: 10px;
+        }
+    </style>
+    <style>
+        .gra1 {
+            background-image: radial-gradient(red, yellow, black);
+        }
+        .gra2{
+            background-image: radial-gradient(50% 30%, red, yellow, black);
+        }
+        .gra3{
+            background-image: radial-gradient(farthest-corner at 80% 80%, red, yellow, black);/* 가장 먼 꼭지점에 맞춰서 그라디언트 종료지점이 정해진다.*/
+        }
+        .gra4{
+            background-image: radial-gradient(farthest-side at 80% 80%, red, yellow, black);/*가장 먼 변 */
+        }
+        .gra5{
+            background-image: radial-gradient(closest-corner at 80% 60%, red, yellow, black);/*가장 가까운 꼭지점*/
+        }
+        .gra6{
+            background-image: radial-gradient(closest-side at 80% 60%, red, yellow, black);/*가장 가까운 변*/
+        }
+    </style>
+</head>
+<body>
+    <div class="gra1"></div>
+    <div class="gra2"></div>
+    <div class="gra3"></div>
+    <div class="gra4"></div>
+    <div class="gra5"></div>
+    <div class="gra6"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+#frame {
+  width: 1200px; height: 500px;
+  background-color: black;
+  margin: 0 auto;
+  background-image: 
+  url(../img/jenny.png),
+  url(../img/woman.png),
+  url(../img/trevi.png),
+  url(../img/trevi1.png),
+  url(../img/trevi2.png),
+  url(../img/trevi3.png),
+  url(../img/tansan.png),
+  url(../img/back.png);
+  background-repeat: no-repeat;
+  background-position: 
+    700px bottom,
+    200% bottom,
+    200px 150px,
+    60% 1000px,
+    49% 1000px,
+    38% 1000px,
+    0 500px,
+    0 0;
+}
+
+#frame:hover{
+  background-position: 
+    -100% bottom,
+    850px bottom,
+    20px 20px,
+    60% bottom,
+    49% bottom,
+    38% bottom,
+    0 -1500px,
+    0 -100px;
+}
+
+#frame{transition: all 2s;}

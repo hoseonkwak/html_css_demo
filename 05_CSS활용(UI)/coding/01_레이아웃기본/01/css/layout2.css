@@ -1,0 +1,316 @@
+/*
+    초기화 및 기본 설정
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+body {
+    background-color: #fff;
+    color: #333333;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/*클리어픽스*/
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*
+    기본 레이아웃(영역 표시)
+*/
+.ho {float: left;}
+.wrap{width: 1200px; margin: 0 auto;}
+.header{height: 100px; position:relative;}
+.slide_wrap{height: 300px;}
+.content_wrap{height: 200px;}
+.footer{height: 100px; position: relative;}
+
+/*영역 컬러링 - 추후 삭제*/
+.wrap {background-color: #ffffff;}
+.header {background-color: #ffffff;}
+.slide_wrap {background-color: #aaa;}
+.content_wrap {background-color: #eee;}
+.footer {background-color: #ddd;}
+
+/*
+    각 영역 자리잡기
+    하위 영역을 조정할때는 부모의 padding으로 조정한다.
+*/
+
+/*헤더*/
+.header{padding-top: 30px;}
+.logo{
+    width: 200px;
+}
+
+#nav {
+    width: 1000px;
+    position: relative;
+}
+
+#gnb {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 50%;
+    /*500px 부모의 크기를 줄이면 알아서 비율로 줄인다.*/
+    height: 40px;
+    z-index: 10000;
+    background-color: #3cb149;
+}
+
+#gnb > li {width: 25%;}
+
+#gnb > li > a {
+    border: 1px solid;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    border-right: none;
+}
+
+#gnb > li:last-child > a {
+    border-right: 1px solid;
+}
+
+/*1차 메뉴 호버효과*/
+#gnb > li:hover > a {
+    background-color: #1d8844;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+/*2차 메뉴*/
+.sub {
+    background-color: #fff;
+    border-bottom: 1px solid;
+}
+#gnb li:first-child .sub {
+    border-left: 1px solid;
+}
+
+#gnb li:last-child .sub {
+    border-right: 1px solid;
+}
+
+/*2차 메뉴 글자 정렬*/
+#gnb > li > ul > li > a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 2차 메뉴 호버 효과 */
+#gnb .sub li:hover a {
+    background-color: #1d8844;
+    color: #fff;
+}
+/*컨텐츠*/
+.con {
+    width: 33.3333%;
+    height: 100%;
+}
+
+.con_1 {
+    background-color: #ccc;
+}
+
+.con_2 {
+    background-color: #eee;
+}
+
+.con_3 {
+    background-color: #ddd;
+}
+
+/*푸터*/
+.copy {
+    width: 800px;
+    background-color: #eee;
+}
+
+.sns {
+    width: 200px;
+    background-color: #ddd;
+}
+
+.footer {
+    padding-top: 30px;
+}
+
+.footer > div {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*
+    슬라이드
+*/
+.slide_wrap {
+    width: 100%;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+}
+
+.bg_1 {
+    background-image: url(http://wooreeweb.com/img/bg-1.jpg);
+}
+
+.bg_2 {
+    background-image: url(http://wooreeweb.com/img/bg-2.jpg);
+}
+
+.bg_3 {
+    background-image: url(http://wooreeweb.com/img/bg-3.jpg);
+}
+
+/*배경 이미지 설정*/
+.slide_wrap {
+    position: relative;
+    overflow: hidden;
+    /*
+        부모를 static이 아닌 다른 포지션으로 해줘야
+        슬라이드 사진이 제대로 들어간다.
+        안그러면 body의 크기로 잡아버린다.
+        (static이 아닌게 없기 때문에.)
+    */
+}
+
+.slide_item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/******************
+    탭
+*******************/
+.tab {
+    width: 390px;
+    margin-top: 10px;
+}
+
+.tab .tt {
+    margin-left: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.tt li {
+    width: 80px;
+    height: 40px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.tt li:last-child {
+    border-right: 1px solid;
+}
+
+.tab .tcw {
+    border: 1px solid;
+    height: 140px;
+    position: relative;
+    top: -1px;
+}
+
+.tab .tc_1 ul {
+    padding-left: 20px;
+}
+
+.tab .tc_1 li {
+    list-style: disc;
+    cursor: pointer;
+}
+
+.tab .tc_2 img {
+    width: 120px;
+    display: block;
+}
+
+.tab .tc_2 img:nth-child(2) {
+    margin: 0 4px;
+}
+
+.tab .tc {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.tab li.on,
+.tab .tc.on {
+    display: block;
+    background-color: #fff;
+}
+
+/*모달*/
+.modal_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid;
+    margin: 150px auto;
+    padding: 10px;
+}
+
+.mt {
+    height: 40px;
+    border-bottom: 1px solid;
+}
+
+.mc {
+    margin: 10px 0;
+}
+
+.modal_wrap button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px;
+}
+
+.modal_wrap {
+    display: none;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JUST Shop</title>
+    <link rel="stylesheet" href="../css/web1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--A part-->
+        <div class="head">
+            <div class="logo">
+                <img src="../img/just_logo.png" alt="">
+            </div>
+            <div class=menu>
+                <nav>
+                    <ul class=ulmenu>
+                        <li class="select">탑
+                            <ul class="drop">
+                                <a href="#"><li class="select">블라우스</li></a>
+                                <a href="#"><li class="select">티</li></a>
+                                <a href="#"><li class="select">셔츠</li></a>
+                                <a href="#"><li class="select">니트</li></a>
+                            </ul>
+                        </li>
+                        
+                        <li class="select">아우터
+                            <ul class="drop">
+                                <a href="#"><li class="select">자켓</li></a>
+                                <a href="#"><li class="select">코트</li></a>
+                                <a href="#"><li class="select">가디건</li></a>
+                                <a href="#"><li class="select">머플러</li></a>
+                            </ul>
+                        </li>
+                        <li class="select">팬츠
+                            <ul class="drop">
+                                <a href="#"><li class="select">청바지</li></a>
+                                <a href="#"><li class="select">짧은바지</li></a>
+                                <a href="#"><li class="select">긴바지</li></a>
+                                <a href="#"><li class="select">레깅스</li></a>
+                            </ul>
+                        </li>
+                        <li class="select">악세서리
+                            <ul class="drop">
+                                <a href="#"><li class="select">귀걸이</li></a>
+                                <a href="#"><li class="select">목걸이</li></a>
+                                <a href="#"><li class="select">반지</li></a>
+                                <a href="#"><li class="select">팔찌</li></a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <!--메인-->
+        <div class="container">
+            <!--B Part-->
+            <div class="slide">
+
+            </div>
+            <!--C Part-->
+            <div class="cpart">
+                <!--<div class="notice">
+                    공지사항
+                </div>-->
+                <div class="notice clearfix">
+                    <!-- (1) 메뉴 탭 -->
+                    <input type="radio" name="tab" id="tab1" checked>
+                    <label for="tab1">공지사항</label>
+
+                    <input type="radio" name="tab" id="tab2">
+                    <label for="tab2">갤러리</label>
+                    <!-- 
+                      name을 같은걸로 해야 하나를 선택했을 때 다른 것이 해제 된다.
+                      label의 for속성은 input의 id와 연결 된다.
+                      그래서 글자를 클릭해도 radio버튼이 선택된다.
+                      CSS는 탑다운방식이라서 위로(형, 부모)는 찾지 못한다.
+                    -->
+
+                    <!-- (2) 탭 컨텐츠 -->
+                    <div class="tab-contents">
+                        <!-- (p.tcon-$>lorem)*3 -->
+                        <div class="tcon-1">
+                            <ul>
+                                <li>공지사항1</li>
+                                <li>공지사항2</li>
+                                <li>공지사항3</li>
+                                <li>공지사항4</li>
+                            </ul>
+                        </div>
+                        <div class="tcon-2">
+                            <img src="http://placehold.it/120X150" alt="" class="ho">
+                            <img src="http://placehold.it/120X150" alt="" class="ho">
+                            <img src="http://placehold.it/120X150" alt="" class="ho">
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    배너
+                </div>
+                <div class="direct">
+                    바로가기
+                </div>
+            </div>
+        </div>
+        
+        <!-- D part -->
+            <div class="footer">
+                <div class="logo2">
+                    <img src="../img/just_logo.png" alt="">
+                </div>
+                <div class="copy">
+                    &copy; Copyright
+                </div>
+                <div class="sns">
+                    <i class="fa fa-instagram fa-2x"></i>
+                    <i class="fa fa-google fa-2x"></i>
+                    <i class="fa fa-facebook fa-2x"></i>
+                    <i class="fa fa-envelope-o fa-2x"></i>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+/************************************ 
+  css/layout.css
+************************************/
+
+/* fonts.css 로딩 */
+@import url('fonts.css');
+
+/* 
+  초기화
+  -하이퍼링크 글자 색상은 #444 
+*/
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: #444;}
+body * { box-sizing: border-box; }
+
+
+/************************************ 
+  레이아웃
+  헤더 고정, 너비는 기본 15%, 최대 200
+************************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  max-width: 200px;
+}
+
+nav {
+  width: 85%;
+  background-color: #222;
+  margin-left: 15%;
+  height: 35px;
+  position: relative;
+}
+
+/* 모듈 */
+.container {
+  width: 85%;
+  margin-left: 15%;
+  position: relative;
+}
+
+.mo {
+  float: left; /* 가로배치 */
+  height: 250px; /* 높이 고정 */
+  /* 하나의 카드는 가로배치 되면서 250px의 크기를 갖는다. */
+  
+}
+
+/* 카드 UI 모듈 */
+/* 1행 */
+.m1 { width: 60%; height: 500px; background-color: #ddd;} 
+.m2 { width: 40%; background-color: #ccc; }
+
+/* 2행 */
+.m3 { width: 20%; background-color: #bbb;}
+.m4 { width: 20%; background-color: #aaa; }
+
+/* 3행 */
+.m5 { width: 20%; background-color: #999;}
+.m6 { width: 40%; background-color: #888;}
+.m7 { width: 20%; background-color: #777; }
+.m8 { width: 20%; background-color: #666; }
+/* 4행*/
+.m9 { width: 20%; background-color: #555;}
+.m10 { width: 20%; background-color: #444; }
+.m11 { width: 40%; background-color: #333;}
+.m12 { width: 20%; background-color: #ddd; }
+
+/* 모듈 내부 컨텐츠 설정 */
+.mo > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 영역을 넘는걸 숨긴다. */
+}
+
+/************************************ 
+  헤더
+************************************/
+
+#logo {
+  background-image: url(../images/logo1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px; height: 200px;
+  position: absolute;
+  top: 50px;
+  left: 50%; margin-left: -100px; /* 가운데 정렬 */
+}
+
+#gnb { position: absolute; top: 300px; }
+#gnb li a { 
+  display: block;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  font
+}
+#gnb li a i { margin-right: 1rem; } /* 1글자 만큼 띄어쓰기 */
+#gnb li a:hover { color: dodgerblue; }
+
+.sns {
+  position: absolute;
+  bottom: 50px;
+  width: 120px;
+  height: 50px;
+  right: 50%; margin-right: -60px;
+}
+.sns a { float: left; }
+.sns .stxt { 
+  width: 50%; 
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sns .icon { 
+  width: 33.3333%;
+  font-size: 30px;
+}
+
+/************************************ 
+  퀵링크
+************************************/
+
+nav a {
+  color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  position: absolute;
+  top: 6px;
+}
+nav a:nth-child(1) { left: 20px; }
+nav a:nth-child(2) { left: 100px; }
+nav a:nth-child(3) { right: 100px; }
+nav a:nth-child(4) { right: 20px; }
+
+/************************************ 
+  컨테이너
+************************************/
+
+/* 모듈 중 .bg 에 배경 이미지 삽입 */
+.bg1 { background-image: url(../images/bg1.jpg); }
+.bg2 { background-image: url(../images/bg2.jpg); }
+.bg3 { background-image: url(../images/bg3.jpg); }
+.bg4 { background-image: url(../images/bg4.jpg); }
+.bg5 { background-image: url(../images/bg5.jpg); }
+.bg6 { background-image: url(../images/bg6.jpg); }
+.bg7 { background-image: url(../images/bg7.jpg); }
+
+/* 배경 이미지 크기 및 위치 조정 */
+.bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* .bg 내부 텍스트(span) */
+.bg span {
+  color: #fff;
+  font-size: 4.5rem;
+  position: absolute;
+  bottom: 0; right: 20px;
+  opacity: 0;
+}
+.mo:hover span { opacity: 1; }
+
+/* 메인모듈 재설정 */
+.bg1 span {
+  opacity: 1;
+  font-size: 8rem;
+  bottom: -50px; right: -5px;
+}
+
+/* 텍스트 모듈 공통 */
+.txt {
+  background-color: #fff;
+  color: #555;
+  padding: 40px 30px;
+}
+.txt strong {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.txt i {
+  color: dodgerblue;
+  font-size: 20rem;
+  position: absolute;
+  bottom: -70px; right: -200px;
+  opacity: 0;
+}
+
+/* 텍스트 모듈 호버 효과 */
+.mo:hover .txt {
+  background-color: #6FCBE7;
+  color: #fff;
+}
+.mo:hover .txt strong { color: #fff; }
+.mo:hover .txt i { right: 0; opacity: 0.5; }
+
+/* 텍스트 모듈 일부 재설정 */
+.mo:nth-child(3) .txt { background-color: #6FCBE7; }
+.mo:nth-child(11) .txt { background-color: #dffafa; }
+
+/* 모듈 3 아이콘 재설정 */
+.mo:nth-child(3) .txt i {
+  bottom: -40px;
+  right: -20px;
+  opacity: 0.7;
+  color: #fff;
+  font-size: 15rem;
+}
+
+/********************************
+  전환 효과 및 모션
+*********************************/
+header,
+nav,
+.mo,
+#gnb a{transition: all 0.6s;}
+
+/* 키프레임 생성 */
+@keyframes zoom {
+  0% { transform: scale();}
+  100% { transform: scale(1);}
+}
+
+/* 모듈 모션 */
+.mo {animation: zoom 1s 1;}/* 로딩이 되는 순간에 한 번만 실행 */
+
+/* 배경이미지 모듈 텍스트 */
+.bg span{
+  transform: scale(10);
+  transition: all 0.6s;
+}
+
+.mo:hover .bg span{
+  transform: scale(1);
+}
+
+/* 모듈1 재설정 */
+.mo .bg1 span {
+  transform: rotateY(0); transition: all 0.6s;
+}
+
+.mo .bg1:hover span {
+  transform: rotateY(360deg); color: #222;
+  text-shadow: 1px 1px 1px #eee;
+}
+
+/* 텍스트 모듈 효과 */
+.txt,
+.txt strong { transition: all 1s;}
+.txt i {transition: all 0.7s;}

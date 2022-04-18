@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : align-content</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      /* 
+        교차축 방향 여허 줄로 자식 배치
+        justify-content 속성 동일
+        stretch
+        flex-start
+        flex-end
+        center
+        space-between
+        sapce-around
+       */
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+
+    #wrap div{
+      width: 100%;
+      height: 100px;
+    }
+
+    #wrap div:first-child {
+      background: aqua;
+    }
+    #wrap div:nth-child(2){
+      background: blueviolet;
+    }
+    #wrap div:nth-child(3){
+      background: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

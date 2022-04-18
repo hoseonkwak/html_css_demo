@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩for</title>
+  <script>
+    var dan = 0;  //단 수
+    var n = 0;    //곱할 수
+    
+    //가로
+    for(n=1; n<=9; n++){ 
+      for(dan=2; dan<=9; dan++){
+        document.write(dan + "*" + n + "=" + dan * n + "&nbsp;");
+      }
+      document.write('<br>');
+    }
+
+    //단
+    for (dan=2; dan <=9; dan ++){
+      //곱할 수
+      for (n=1; n<=9; n++){
+        document.write('<p>'+dan + '*' + n + '=');
+        document.write(dan * n);
+      }
+    }
+
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

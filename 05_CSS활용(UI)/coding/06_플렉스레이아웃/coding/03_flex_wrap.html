@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : flex-wrap</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /* 플렉스 컨테이너 */
+    #wrap{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; /* 자식을 여러 줄로 배치 */
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+
+    /* 플렉스 아이템 */
+    #wrap div{
+      width: 100%;
+    }
+
+    #wrap div:first-child {
+      background: aqua;
+    }
+    #wrap div:nth-child(2){
+      background: blueviolet;
+    }
+    #wrap div:nth-child(3){
+      background: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

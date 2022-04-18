@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : flex-end</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      display: flex;
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+
+    #wrap div{
+      width: 33.33%;
+      height: 200px;
+    }
+
+    #wrap div:first-child {
+      align-self: flex-end;
+      /* 
+        교차축 전체 배치
+        -> 플렉스 컨테이너에 align-items 속성 사용
+        교차축 방향 플렉스 아이템의 개별 배치
+        auto : 플렉스 컨테이너의 align-item 속성 값 상속 받음
+        속성 값이 없는 경우 stretch로 적용
+        stretch
+        flex-start
+        flex-end
+        center
+        baseline
+       */
+      background: aqua;
+    }
+    #wrap div:nth-child(2){
+      align-self: center;
+      background: blueviolet;
+    }
+    #wrap div:nth-child(3){
+      background: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

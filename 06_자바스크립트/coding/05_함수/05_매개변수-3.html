@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매개변수</title>
+  <script>
+    var name = '홍길동';
+
+    var a = 90;
+    var b = 80;
+    var c = 70;
+    function sum(x,y,z){
+      /* var result = x + y + z; */
+      return x+y+z;
+    }
+
+    function avg(){
+      var res = sum(a, b, c) /3;
+      return res;
+    }
+
+    document.write(name + '의 총점 : ' + sum(a,b,c)+'<br>')
+    document.write(name + '의 평균 : ');
+    document.write(avg());
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

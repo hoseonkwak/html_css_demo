@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : align-items</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      display: flex;
+      width: 90%;
+      align-items: center;
+      /* 
+        교차축(cross axis) 방향의 자식(플렉스 아이템) 배티
+        stretch : 기본값
+        flex-start
+        flex-end
+        center
+        baseline
+       */
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+
+    #wrap div{
+      width: 33.33%;
+      height: 200px;
+    }
+
+    #wrap div:first-child {
+      background: aqua;
+      height: 80%;
+      font-size: 2em;
+    }
+    #wrap div:nth-child(2){
+      background: blueviolet;
+      height: 60%;
+      font-size: 2.1em;
+    }
+    #wrap div:nth-child(3){
+      background: darkorange;
+      height: 90%;
+      font-size: 1.8em;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div>
+      <h3>
+        플렉스 아이템1 ( 높이 80%)
+      </h3>
+    </div>
+    <div>
+      <h3>플렉스 아이템2(높이 60%)</h3>
+    </div>
+    <div>
+      <h3>플렉스 아이템3(높이 90%)</h3>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : justify-content</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      display: flex;
+      width: 90%;
+      justify-content: space-around;
+      /* 
+        플렉스 아이템은 플렉스 컨테이너의 주축의 시작점부터 배치
+        주축 방향의 자식 배치를 다양하게 배치하고자 할 때
+        fles-start : 주축의 시작점부터(기본값)
+        flex-end : 주축의 끝점부터
+        center : 중앙 정렬
+        space-between : 첫번째와 마지막 아이템 사이의 여백
+        space-arround : 모든 아이템의 좌우에 여백
+       */
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+
+    #wrap div{
+      width: 20%;
+    }
+
+    #wrap div:first-child {
+      background: aqua;
+    }
+    #wrap div:nth-child(2){
+      background: blueviolet;
+    }
+    #wrap div:nth-child(3){
+      background: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
